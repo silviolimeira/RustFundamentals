@@ -34,8 +34,24 @@ fn operators() {
     println!("{} == 5 resp: {}", x, x_is_5);
 }
 
+fn scope_and_shadowing() {
+    
+    let a = 123;
+
+    {
+        let b = 456;
+        println!("inside, b = {}", b);
+
+        let a = 777;
+        println!("inside, a = {}", a);
+
+    }
+
+    println!("outside, a = {}", a);
+}
+
 fn main() {
 
-    operators();
-
+    //operators();
+    scope_and_shadowing();
 }
