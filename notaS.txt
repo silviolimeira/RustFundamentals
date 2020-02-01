@@ -7,3 +7,7 @@ https://www.forrestthewoods.com/blog/how-to-debug-rust-with-visual-studio-code/
 
 configure PATH addin runst bin directory:
 set PATH=%PAT%;C:\Users\limeira\.cargo\bin;
+
+Course:
+https://app.pluralsight.com/library/courses/rust-fundamentals/table-of-contents
+Dmitri Nesteruk
