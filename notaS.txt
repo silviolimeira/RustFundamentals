@@ -1,0 +1,9 @@
+
+Install Rust
+https://www.rust-lang.org/tools/install
+
+How to Debug Rust with Visual Studio Code:
+https://www.forrestthewoods.com/blog/how-to-debug-rust-with-visual-studio-code/
+
+configure PATH addin runst bin directory:
+set PATH=%PAT%;C:\Users\limeira\.cargo\bin;
