@@ -1,4 +1,7 @@
-//use std::mem;
+#![allow(dead_code)]
+#![allow(unused_variable)]
+mod sh;
+use sh::stack_and_heap;
 
 const MEANING_OF_LIFE:u8 = 42; // no fixed address
 
@@ -64,17 +67,25 @@ fn scope_and_shadowing(execute:bool) {
     }
 }
 
+fn meaning_of_life(execute:bool) {
+    if execute == true 
+    {
+        println!("MEANING_OF_LIFE: {}", MEANING_OF_LIFE);
+        println!("Z: {}", Z);
+        unsafe {
+            Y = 12;
+            println!("Y: {}", Y);
+        }
+    
+    }
+}
+
 fn main() {
 
-    println!("MEANING_OF_LIFE: {}", MEANING_OF_LIFE);
-    println!("Z: {}", Z);
-    unsafe {
-        Y = 12;
-        println!("Y: {}", Y);
-    }
 
     operators(false);
     scope_and_shadowing(false);
-
-
+    meaning_of_life(false);
+    // use module sh
+    stack_and_heap();
 }
