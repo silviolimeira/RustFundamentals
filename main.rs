@@ -1,5 +1,11 @@
 //use std::mem;
 
+const MEANING_OF_LIFE:u8 = 42; // no fixed address
+
+static Z:i32 = 132;
+static mut Y:i32 = 113322;
+
+
 fn operators(execute:bool) {
     // arithmetic
 
@@ -60,6 +66,15 @@ fn scope_and_shadowing(execute:bool) {
 
 fn main() {
 
+    println!("MEANING_OF_LIFE: {}", MEANING_OF_LIFE);
+    println!("Z: {}", Z);
+    unsafe {
+        Y = 12;
+        println!("Y: {}", Y);
+    }
+
     operators(false);
-    scope_and_shadowing(true);
+    scope_and_shadowing(false);
+
+
 }
